@@ -1,0 +1,81 @@
+
+  img {
+    max-width: 100%;
+  }
+  .divimage{
+      max-height: 210px;
+  }
+  .container{
+    padding: 0;
+  }
+
+.relatedProductsimage{
+      width: 90%;
+      padding-left: 10%;
+  }
+  .checked{
+    color: orange;
+}
+.btnAddCartproduct{
+    border: 2px solid orange;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.btnAddCartproduct:hover{
+    background-color: orange;
+}   
+.btnAddCart:hover{
+    background-color: rgb(212, 211, 211);
+}
+
+.nowrap{white-space: nowrap;}
+
+.track::-webkit-scrollbar {
+    display: none;
+  }
+  .track{
+    display: inline-flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* transform: translateX(20px); */
+  }
+  .card-container{
+    transform: translateX(-62px);
+    width: 100%;
+    padding: 0 10px;
+    transition: .3s;
+  }
+  .leftarrow{
+    position: sticky;
+    height: 100px;
+    top: 10rem;
+    background-color: #181818;
+    color: #fff;
+    padding: 20px;
+    opacity: .4;
+    left: 8px;
+    z-index: 1;
+  }
+  .leftarrow:hover{
+    transform: translateX(20px);
+    opacity: .6;
+    color: #fff;
+    transition: .2s;
+  }
+  .Rightarrow{
+    position: sticky;
+    height: 100px;
+    top: 10rem;
+    background-color: #181818;
+    color: #fff;
+    padding: 20px;
+    opacity: .4;
+    right: 12px;
+    z-index: 1;
+  }
+  .Rightarrow:hover{
+    transform: translateX(-20px);
+    opacity: .6;
+    color: #fff;
+    transition: .2s;
+  }

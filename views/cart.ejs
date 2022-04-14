@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Mingo</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/MainCssFiles.css">
+        <link rel="stylesheet" href="css/ProductPage.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <link rel="stylesheet" href="css/cart.css">
+        <!-- <link rel="stylesheet" href="../CSS files/HomePage.css">    -->
+        <!-- <link rel="stylesheet" href="../CSS files/Searching.css"> -->
+    </head>
+        <body id="body-pd" >
+            <!-- Side bar -->
+            <%- include("./partials/sidebar") %> 
+            <%- include("./partials/navbar") %>     
+    <!--Container Main start-->        
+            <div class="row mt-3">
+                <div class="col-2"></div>
+                <div class="">
+                    <div class="col mb-3 cartproducts border py-3">
+                        <div class="d-flex">
+                            <div class="d-flex">
+                                <div><img src="../Images/access3.jpg" alt="imageproduct" class="imageproduct"></div>
+                                <div class="ml-4"> 
+                                    <p class="h3 ml-3">Product Name</p>
+                                    <p class="h5 ml-3">This is a breive description for the product</p>
+                                    <p class="h4 ml-3">$145</p>
+                                    <a href="#" class="text-success ml-3">Remove</a>
+                                </div>
+                            </div>
+                            <div class="d-flex ml-5">
+                                <p class="h4 mt-1">Qty</p>
+                                <input type="number" class="form-control border w-25 ml-3 py-1 px-1 text-center" value="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 cartproducts border py-3">
+                        <div class="d-flex">
+                            <div class="d-flex">
+                                <div><img src="../Images/access3.jpg" alt="imageproduct" class="imageproduct"></div>
+                                <div class="ml-4"> 
+                                    <p class="h3 ml-3">Product Name</p>
+                                    <p class="h5 ml-3">This is a breive description for the product</p>
+                                    <p class="h4 ml-3">$145</p>
+                                    <a href="#" class="text-success ml-3">Remove</a>
+                                </div>
+                            </div>
+                            <div class="d-flex ml-5">
+                                <p class="h4 mt-1">Qty</p>
+                                <input type="number" class="form-control border w-25 ml-3 py-1 px-1 text-center" value="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-3 mx-lg-5 border checkout pt-3">
+                    <p class="h3">Information</p>
+                    <div class="d-flex mt-1">
+                        <label for="firstName" name="fname"  class="form-label col-4" >First name</label>
+                        <label for="firstName" name="fname"  class="form-label col-8" >AbdElrahman</label>
+                    </div>
+                    <div class="d-flex mt-1">
+                        <label for="firstName" name="fname"  class="form-label col-4" >Last name</label>
+                        <label for="firstName" name="fname"  class="form-label col-8" >Shaban</label>
+                    </div>
+                    <div class="d-flex mt-1">
+                        <label for="firstName" name="fname"  class="form-label col-4" >Email Address</label>
+                        <label for="firstName" name="fname"  class="form-label col-8" >abdelrahman@gmail.com</label>
+                    </div>
+                    <div class="d-flex mt-1">
+                        <label for="firstName" name="fname"  class="form-label col-4" >Phone Number</label>
+                        <label for="firstName" name="fname"  class="form-label col-8" >010210000000</label>
+                    </div><hr>
+                    <div class="address d-flex">
+                        <p class="h5">Address</p>
+                        <a href="#" class="text-success d-flex justify-content-end">Edit</a>
+                    </div><hr>
+                    <div class="payment">
+                        <p class="h5 mb-4">Choose a payment method</p>
+                        <div class="d-flex py-3 px-3 paymentoption">
+                            <input type="radio">
+                            <p class="h6 ml-3">Cash on delivery</p>
+                        </div>
+                        <div class="d-flex py-3 px-3 paymentoption">
+                            <input type="radio" class=" mt-2">
+                            <img src="../Images/mastercard.jpg" alt=""class="ml-3">
+                            <p class="h6 ml-3 mt-2">Mastercard</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-success col py-3 mt-3 btncheckout">Continue to checkout</button>
+                </div>
+            </div>
+
+            <%- include("./partials/footer") %> 
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.20/jquery.zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script type='text/Javascript' src="js/searching.js"></script>
+    </body>
+</html>
