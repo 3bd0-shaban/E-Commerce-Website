@@ -7,18 +7,10 @@
     height: 20%;
     width: 100%;
 }
-.childImageDiv{
-    /* max-width: 100%; */
-    /* height: 100px; */
-    /* background-color: #fff; */
-}
+
 .childImageDiv:hover{
     /* transform: scaley(1.3); */
     transition: .2s;
-}
-.childImage{
-    /* min-width: 100px; */
-    /* height: 100px; */
 }
 .arrowleft,.arrowright{
     font-weight: bold;
@@ -278,7 +270,7 @@
 }
 .card-container{
   transform: translateX(-62px);
-  width: 100%;
+  /* width: 100%; */
   padding: 0 10px;
   transition: .3s;
 }

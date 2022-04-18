@@ -1,18 +1,6 @@
 
-<!doctype html>
-<html>
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <title>Mingo</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/MainCssFiles.css">
-        <!-- <link rel="stylesheet" href="css/HomePage.css">    -->
-        <!-- <link rel="stylesheet" href="css/Searching.css"> -->
-    </head>
+        <%- include("./partials/Head")  %> 
+
         <body id="body-pd" >
             <!-- Side bar -->
             <%- include("./partials/sidebar") %> 
@@ -20,75 +8,71 @@
 <!-- The Body of the page  -->
             <div class=" container navigationbar ">	
                 <main>
-                    <div class="py-5">
+                    <div class="py-5 ms-md-5">
                         <div class="col-md-7 col-lg-8">
                             <h4 class="mb-3">Sign Up</h4>
-                            <form>
+                            <form action="signupuser" method="post">
                             <div class="row g-3">
                                 <div class="col-sm-6">
                                 <label for="firstName" name="fname" required class="form-label" >First name</label>
-                                <input type="text" class="form-control border" id="firstName"required autocomplete="off">
+                                <input type="text"name="first_name" class="form-control border" id="firstName"required autocomplete="off">
                                 
                                 </div>
 
                                 <div class="col-sm-6">
                                 <label for="lastName"  class="form-label">Last name</label>
-                                <input type="text" class="form-control border" id="lastName"required>
+                                <input type="text" name="second_name" class="form-control border" id="lastName"required>
                                 </div>
                                 
                                 <div class="col-12">
                                 <label for="username" class="form-label">Username</label>
-                                <div class="input-group has-validation">
-                                    <input type="text" class="form-control border" id="username" placeholder="Username" required>
-                                
-                                </div>
                                 </div>
 
                                 <div class="col-12">
                                 <label for="email" class="form-label">Email <span class="text-muted"></span></label>
-                                <input type="email" class="form-control border" id="email" placeholder="you@example.com" required>
+                                <input type="email" name="email" class="form-control border" id="email" placeholder="you@example.com" required>
                                 
                                 </div>
 
                                 <div class="col-12">
                                     <label for="password" class="form-label">passowrd <span class="text-muted"></span></label>
-                                    <input type="password" class="form-control border" id="password" placeholder="password" required>
+                                    <input type="password" name="password" class="form-control border" id="password" placeholder="password" >
                                     
                                 </div>
                                     
                                 <div class="col-12">
                                     <label for="password" class="form-label">Re-Enter Password <span class="text-muted"></span></label>
-                                    <input type="password" class="form-control border" id="password" placeholder="password" required>
+                                    <input type="password"name="password" class="form-control border" id="password" placeholder="password" >
                                     
                                 </div>
                                 
                                 <div class="col-12">
                                     <label for="phonenumber" class="form-label">Phone Number <span class="text-muted"></span></label>
-                                    <input type="number" class="form-control border" id="email" placeholder="number" required>
+                                    <input type="number"name="phonenumber" class="form-control border" id="email" placeholder="number" required>
                                     
                                 </div>
                                 <h4 class="m-3">Billing Address</h4>   
                                 <div class="col-12">
                                 <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control border" id="address" placeholder="1234 Main St" required>
+                                <input type="text" name="district" class="form-control border" id="address" placeholder="1234 Main St" required>
                                 
                                 </div>
 
                                 <div class="col-12">
                                 <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
-                                <input type="text" class="form-control border" id="address2" placeholder="Apartment or suite">
+                                <input type="text" name="apartment" class="form-control border" id="address2" placeholder="Apartment or suite">
                                 </div>
 
                                 <div class="col-md-5">
                                 <label for="country" class="form-label">Country</label>
-                                <select class="form-select border" id="country" required>
+                                <select class="form-select border" id="country" >
                                     <option value="">Choose...</option>
                                     <option >Egypt</option>
                                 </select>
                                 </div>
                                 <div class="col-md-4">
                                 <label for="state" class="form-label">State</label>
-                                <select class="form-select border" id="state" required>
+                                <select class="form-select border" id="state" >
                                     <option value="">Choose...</option>
                                     <option>Cairo</option>
                                     <option>Alaxandria</option>
@@ -99,7 +83,7 @@
 
                                 <div class="col-md-3">
                                 <label for="zip" class="form-label">Zip</label>
-                                <input type="text" class="form-control border" id="zip" placeholder="" required>
+                                <input type="text"name="zipcode" class="form-control border" id="zip" placeholder="" required>
                                 
                                 </div>
                             </div>
@@ -136,26 +120,26 @@
                             <div class="row gy-3 paymentinformation">
                                 <div class="col-md-6">
                                 <label for="cc-name" class="form-label">Name on card</label>
-                                <input type="text" class="form-control border" id="cc-name" placeholder="" required>
+                                <input type="text"name="card_name" class="form-control border" id="cc-name" placeholder="" >
                                 <small class="text-muted">Full name as displayed on card</small>
                                 
                                 </div>
 
                                 <div class="col-md-6">
                                 <label for="cc-number" class="form-label">Credit card number</label>
-                                <input type="text" class="form-control border" id="cc-number" placeholder="" required>
+                                <input type="text" name="card_number" class="form-control border" id="cc-number" placeholder="" >
                                 
                                 </div>
 
                                 <div class="col-md-3">
                                 <label for="cc-expiration" class="form-label">Expiration</label>
-                                <input type="text" class="form-control border" id="cc-expiration" placeholder="" required>
+                                <input type="text" name="card_expire" class="form-control border" id="cc-expiration" placeholder="" >
                                 
                                 </div>
 
                                 <div class="col-md-3">
                                 <label for="cc-cvv" class="form-label">CVV</label>
-                                <input type="text" class="form-control border" id="cc-cvv" placeholder="" required>
+                                <input type="text" class="form-control border" id="cc-cvv" placeholder="" >
                                 
                                 </div>
                             </div>
@@ -173,13 +157,3 @@
 
 
             <%- include("./partials/footer") %> 
-
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.20/jquery.zoom.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type='text/Javascript' src="js/searching.js"></script>
-</body>
-</html>
