@@ -58,7 +58,7 @@ route.get("/signUp", services.signup);
 route.get("/signin", services.signin);
 route.get("/addproduct", services.addproduct);
 route.get("/cart", services.cart);
-route.get("/category", services.category);
+route.get("/mainpage/category/:category", services.category);
 route.get("/profile", services.profile);
 route.get("/search", services.seach);
 route.get("/signupasseller", services.signupseller);
@@ -68,7 +68,7 @@ route.get("/mainpage/:id",services.go_to_productpage);
 
 route.post("/upload_Product_data", (req, res) => {
     const productstore = new modelproductadd(req.body);
-
+    res.json(productstore);
     console.log(req.body);
 
     productstore

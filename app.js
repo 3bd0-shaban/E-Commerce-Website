@@ -5,21 +5,19 @@ const bodyParser = require("body-parser");
 const morgan = require('morgan');
 const cors = require('cors');
 const port = 3000;
-app.use(morgan('dev'))
-app.use(cors())
+app.use(morgan('dev'));
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-
-/////////////////////////////
-
 app.use('/api/user/', require('./routes/router.js'));
-////////////////////////////////
 
 
 // mongoose
+// mongoose.connect(DB_URL).then(()=>{
 
+// })
 mongoose
     .connect(
         "mongodb+srv://3bdo:0777888999@cluster0.6pmbd.mongodb.net/all-data?retryWrites=true&w=majority"
@@ -36,4 +34,4 @@ mongoose
 // .catch((err) => {
 //     console.log(err);
 // })
-app.use('/',require('./routes/router'))
+app.use('/',require('./routes/router'));

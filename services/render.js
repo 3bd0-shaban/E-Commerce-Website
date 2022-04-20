@@ -38,15 +38,24 @@ exports.seach = (req,res)=>{
 exports.signupseller = (req,res)=>{
     res.render("signupseller",{stylecss:'',title:'Sign Up For Sellers'});
 }
-exports.category = (req,res)=>{
-    modelproductadd.find({category:'Laptop'})
+exports.category = (req, res) => {
+    modelproductadd.find({category})
     .then((result) => {
-        res.render("categories",{arrproduct:result,stylecss:'css/Searching.css',title:'Category'});
+        res.render("categories",{arrproduct:result,stylecss:"css/Searching.css",title:'Category'});
     })
     .catch((err) => {
         console.log(err);
-    });   
-};
+    });
+}
+// exports.category = (req,res)=>{
+//     modelproductadd.find()
+//     .then((result) => {
+//         res.render("categories",{arrproduct:result,stylecss:'css/Searching.css',title:'Category'});
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     });   
+// };
 exports.addproduct = (req,res)=>{
     modelproductadd.find()
     .then((result) =>{
