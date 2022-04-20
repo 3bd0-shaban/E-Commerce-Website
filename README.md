@@ -1,4 +1,4 @@
-# CRUD_Application_Node
+# E-Commerce-Website
 In this project, we are going to create E-Commerce-Website with express and mongodb.
 
 #### To Run this project Clone it and install modules using
