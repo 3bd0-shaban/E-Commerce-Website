@@ -19,7 +19,6 @@
 .btnAddCartproduct{
     border: 2px solid orange;
     border-radius: 10px;
-    margin-bottom: 2rem;
 }
 .btnAddCartproduct:hover{
     background-color: orange;
@@ -27,7 +26,11 @@
 .btnAddCart:hover{
     background-color: rgb(212, 211, 211);
 }
-
+.productboxdetail{
+  bottom: 38px;
+    padding: 10px;
+    padding-right: 17px;
+}
 .nowrap{white-space: nowrap;}
 
 .track::-webkit-scrollbar {
@@ -37,13 +40,22 @@
     display: inline-flex;
     overflow-x: auto;
     overflow-y: hidden;
+    width: 100%;
     /* transform: translateX(20px); */
+  }
+  .card{
+    min-height: 399px;
   }
   .card-container{
     transform: translateX(-62px);
-    /* width: 100%; */
+    width: 20px;
     padding: 0 10px;
     transition: .3s;
+    position: relative;
+  }
+  .btnonhoverproductbox{
+    /* margin-bottom: auto; */
+    padding: 10px;
   }
   .leftarrow{
     position: sticky;

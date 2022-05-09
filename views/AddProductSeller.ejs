@@ -21,6 +21,9 @@
             <%- include("./partials/navbar") %> 
 <!-- The Body of the page  -->
             <div class="container mt-3">
+                
+              
+
                 <div class="py-5">
                     <div class="col col-lg-8 border py-5 ">
                         <p class="h3 text-muted">Add Product</p>
@@ -69,17 +72,17 @@
                             </div>
                             </div>
                             <div class="col-12 py-2">
-                                <label for="firstName" name="fname" required class="form-label" >Product Name</label>
-                                <input type="text" name="product_name" class="form-control border" id="firstName"required autocomplete="off">
+                                <label for="firstName" name="fname"  class="form-label" >Product Name</label>
+                                <input type="text" name="product_name" class="form-control border" id="firstName" autocomplete="off">
                             </div>
                             <div class="col-12 py-2">
                                 <label for="price" class="form-label">Price <span class="text-muted"></span></label>
-                                <input type="Number" name="Price" class="form-control border" id="price" placeholder="EG 0.00"required >
+                                <input type="Number" name="price" class="form-control border" id="price" placeholder="EG 0.00" >
                             </div>
                             <div class="row col-12 py-2">
                                 <div class="col-md-5">
                                     <label for="country" class="form-label">Category</label>
-                                    <select class="form-select border"id="select1" name="Category" onchange="myFunction()" required>
+                                    <select class="form-select border"id="select1" name="category" onchange="myFunction()" >
                                         <option value="">Choose...</option>
                                         <option value="Men's Fasion">Men's Fasion</option>
                                         <option value="Women's Fasion">Women's Fasion</option>
@@ -98,22 +101,22 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label for="state" class="form-label">from Category</label>
-                                    <select class="form-select border" id="select2"name="Child_category" >
+                                    <select class="form-select border" id="select2"name="child_category" >
                                         <option value="">Choose...</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-12 py-2">
                                 <label for="text" class="form-label">Add a brieve description <span class="text-muted"></span></label>
-                                <textarea type="text" name="brieve_description"class="form-control border" id="desc" placeholder="brieve descripion" required></textarea>
+                                <textarea type="text" name="brief_description"class="form-control border" id="desc" placeholder="brieve descripion" ></textarea>
                             </div>
                             <div class="col-12 py-2">
                                 <label for="text" class="form-label">Add full descripion <span class="text-muted"></span></label>
-                                <textarea type="text" name="full_description" class="form-control border" cols="30" rows="10" id="fulldescription" placeholder="add full description" required></textarea>
+                                <textarea type="text" name="full_description" class="form-control border" cols="30" rows="10" id="fulldescription" placeholder="add full description" ></textarea>
                             </div>
                             <div class="col-12 py-2">
                                 <label for="url" class="form-label">Checkout URL<span class="text-muted"></span></label>
-                                <input type="url" name="checkout_url" class="form-control border" id="email" placeholder="http://www.example.com" required>
+                                <input type="url" name="checkout_url" class="form-control border" id="email" placeholder="http://www.example.com" >
                             </div>
                             <div class="my-2">
                                 <p class="h4 ml-4">Share this Product</p>

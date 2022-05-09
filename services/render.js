@@ -1,7 +1,7 @@
 
-const modelproductadd = require("../models/addProduct");
+const modelproductadd = require("../models/products");
 
-exports.homeRoutes = (req, res) => {
+exports.homepage = (req, res) => {
     modelproductadd.find()
     .then((result) => {
         res.render("mainpage",{arrproduct:result,stylecss:"/css/mainpage.css",title:'mingo'});
@@ -14,14 +14,15 @@ exports.homeRoutes = (req, res) => {
 exports.go_to_productpage = (req,res)=>{
     modelproductadd.findById(req.params.id)
     .then((result) =>{
-        res.render("ProductPage",{objproduct:result,stylecss:'/css/ProductPage.css',title:'Product'});
+        res.render("productPage",{objproduct:result,stylecss:"/css/ProductPage.css",title:'Product'});
     })
     .catch((err) =>{
         console.log(err);
     })
 }
-exports.signup = (req,res)=>{
-    res.render("signUp",{stylecss:'',title:'Rigster'});
+
+exports.register = (req,res)=>{
+    res.render("register",{stylecss:'',title:'Rigster'});
 }
 exports.signin = (req,res)=>{
     res.render("signIn",{stylecss:'',title:'sign in'});
@@ -56,6 +57,47 @@ exports.category = (req, res) => {
 //         console.log(err);
 //     });   
 // };
+
+
+
+
+
+
+
+
+
+//////////////////
+const axios = require('axios');
+
+
+exports.users = (req, res) => {
+    // Make a get request to /api/users
+    axios.get('http://localhost:3000/api/users')
+        .then(function(response){
+            res.render('users', { users : response.data });
+        })
+        .catch(err =>{
+            res.send(err);
+        })
+
+    
+}
+
+exports.add_user = (req, res) =>{
+    res.render('add_user');
+}
+
+exports.update_user = (req, res) =>{
+    axios.get('http://localhost:3000/api/users', { params : { id : req.query.id }})
+        .then(function(userdata){
+            res.render("register", { user : userdata.data,title:'update information',stylecss:''})
+        })
+        .catch(err =>{
+            res.send(err);
+        })
+}
+
+//////////////////
 exports.addproduct = (req,res)=>{
     modelproductadd.find()
     .then((result) =>{
