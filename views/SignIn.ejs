@@ -1,0 +1,41 @@
+        <%- include("./partials/Head")  %> 
+        <body id="body-pd" >
+            <!-- Side bar -->
+            <%- include("./partials/sidebar") %> 
+                <%- include("./partials/navbar") %> <!-- The Body of the page  -->
+            <div class=" container" style="height: 575px;">	
+                <main>
+                    <div class="py-5 ml-md-5">
+                        <div class="col-md-7 col-lg-8">
+                            <h4 class="mb-3">Sign In</h4>
+                            <form action="login" method="post">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+                                <input type="email" class="form-control border" id="email" name="email" placeholder="you@example.com" >
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="password" class="form-label">passowrd <span class="text-muted"></span></label>
+                                    <input type="password" class="form-control border" id="password" name="password" placeholder="password" >
+                                    <a href="#" class="nav-link m-auto d-flex flex-row-reverse">Forget Your Password ?</a>
+                                </div>  
+                            <div class="form-check m-3 mb-2 mt-3 col-12">
+                                <input type="checkbox" class="form-check-input" id="save-info">
+                                <label class="form-check-label" for="save-info">Remmember Me</label>
+                            </div>
+                            <div class="col-12">
+                                <button class=" btn btn-success col-6  btn-lg" type="submit">Sign In</button>
+                            </div>
+                            <p class="mt-3 col-12">You don't have an account ? <a href="/register">Sign up</a></p>
+                            <div class="signinwith col-12">
+                                <h5 class="d-inline">Sign in with</h5>
+                                <a href="www.facebook.com" ><i class="bi bi-facebook pl-3 social"></i></a>
+                                <a href="www.facebook.com"><i class="bi bi-google pl-3 social"></i></a>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <%- include("./partials/footer") %> 
